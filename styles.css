@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("./images/cool-background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    opacity: 0.6;
+}
+
+.weather {
+    z-index: 2;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.weather>div {
+    margin: 0.625rem;
+}
+
+.weather1 {
+    font-size: 4rem;
+    margin-right: 1rem;
+}
+
+.weather p {
+    font-size: 2.5rem;
+}
+
+.weather span {
+    font-size: 1rem;
+}
+
+.weather3 {
+    margin-left: 2rem;
+}
+
+.weather3 span {
+    margin: 1rem;
+}
+
+.weather3 img {
+    width: 5rem;
+}
+
+
+nav {
+    height: 100px;
+    border-radius: 100px 100px 0 0;
+    padding: 1rem 0;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.18);
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(180, 177, 177, 0.075);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+nav form {
+    width: 70%;
+    grid-template-columns: 5fr 1fr;
+    display: grid;
+}
+
+.citySearch {
+    font-size: 1.1rem;
+    outline: none;
+    color: white;
+    background: transparent;
+    padding: 1rem 0;
+    border: none;
+    border-bottom: 2px solid white;
+    width: 98%;
+}
+
+nav form button {
+    transition: all ease-in 0.25s;
+    background-color: #fff;
+    font-size: 1.2rem;
+    color: #000;
+    border-radius: 25px 25px 25px 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+nav form button:hover {
+    transform: translate(0px, -10px);
+    background: #000;
+    color: #fff;
+    outline: none;
+}
+
+@media screen and (max-width: 600px) {
+
+    .container::before {
+        background-size: cover;
+    }
+
+    .citySearch {
+        width: 80%;
+    }
+
+    nav form button {
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+
+    .weather {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .weather>div {
+        margin: 1rem;
+    }
+
+    nav {
+        padding: 0.5rem;
+        height: 85px;
+    }
+
+}
